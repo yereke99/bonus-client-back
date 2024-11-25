@@ -41,5 +41,18 @@ func (h *Handler) InitHandler() *gin.Engine {
 		c.JSON(http.StatusOK, "pong")
 	})
 
+	// Customer Email code send
+	r.POST("/request-otp")
+	r.POST("/login")
+
+	// Refresh token
+	r.POST("/refresh-token")
+	r.POST("/get-profile")
+
+	r.PATCH("/customer/profile")
+	r.GET("/customer/partners")
+	r.GET("/customer/transactions")
+	r.DELETE("/customer/profile")
+
 	return r
 }
