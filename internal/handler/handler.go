@@ -47,12 +47,17 @@ func (h *Handler) InitHandler() *gin.Engine {
 
 	// Refresh token
 	r.POST("/refresh-token")
+
+	// С токеном клиента
 	r.POST("/get-profile")
 
 	r.PATCH("/customer/profile")
 	r.GET("/customer/partners")
 	r.GET("/customer/transactions")
 	r.DELETE("/customer/profile")
+
+	// С токеном торговый точки
+	r.GET("/company-asset/profile")
 
 	return r
 }
